@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counting the occurence of character</title>
+</head>
+<body>
+  <script>
+    var str="jaava";
+    res=[];
+    for(i=0; i<str.length;i++){
+      res.push(str.charAt(i))
+      console.log(res);
+    }
+    res=['j', 'a', 'a', 'v', 'a'];
+    arr=[];
+    for(i=0;i<arr.length;i++){
+      var flag=false;
+      if(res.length==0){
+        res.push(arr[i]);
+        console.log(res);
+      }
+      else{
+        for(j=0;j<res.length;j++){
+          if(arr[i]==res[j]){
+            flag=true;
+            break;
+          }
+        }
+        if(flag==false){
+          res.push(arr[i]);
+        }
+      }
+    }
+    console.log(res);
+    for(i=0;i<arr.length;i++){
+      count=1;
+      for(j=i+1;j<str.length;j++){
+        if(arr[i]==str[j]){
+          count++;
+        }console.log(arr[i]);
+      }
+    }
+  </script>
+</body>
+</html>

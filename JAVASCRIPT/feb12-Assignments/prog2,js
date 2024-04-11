@@ -1,0 +1,26 @@
+function fibonacciSeries(n) {
+  // Initialize an array to store Fibonacci numbers
+  let fibonacci = [];
+
+  // First two numbers of Fibonacci series
+  fibonacci[0] = 0;
+  fibonacci[1] = 1;
+
+  // Generate Fibonacci series
+  for (let i = 2; i < n; i++) {
+      fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+  }
+
+  // Create a table to display the Fibonacci series
+  let table = "<table border='1'><tr><th>Index</th><th>Fibonacci Number</th></tr>";
+  for (let i = 0; i < n; i++) {
+      table += "<tr><td>" + i + "</td><td>" + fibonacci[i] + "</td></tr>";
+  }
+  table += "</table>";
+
+  // Display the table
+  document.getElementById("fibonacciTable").innerHTML = table;
+}
+
+// Call the function with the number of terms you want in the series
+fibonacciSeries(12); // Change the argument to generate a different number of terms

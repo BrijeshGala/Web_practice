@@ -1,0 +1,29 @@
+<!-- Attribute selectors -->
+<!--
+  att^=val:Matches an element with an attr attribute whose value starts with val.
+  attr$=val:Matches an element with an attr attribute whose value ends with val.
+  attr*=val:Matches an element with an attr attribute whose value contains val somewhere within it.
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+    }
+    input[type=text]{
+      outline: green solid 3px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+  Name:<input type="text"><br>
+  <input type="button" value="click">
+</body>
+</html>

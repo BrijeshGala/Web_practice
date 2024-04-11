@@ -1,0 +1,7 @@
+#taskForm{
+  visibility:hidden;
+  border:2px solid grey;
+  margin-top:2%;
+  padding:10px;
+  width:50%;
+}

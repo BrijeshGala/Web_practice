@@ -1,0 +1,46 @@
+
+<!-- 
+  Pseudoelements:
+  It targets the documents based on the hierarchical relationship of the element.
+  It is dom based.
+
+  nth-child():
+  nth-last-child():
+  nth-of-type():
+  nth-last-of-type():target that particular type from ending.
+  first-child():target the first.
+  last-child():target the last.
+  first-of-type():
+  last-of-type():
+ -->
+<!DOCTYPE html> -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px;
+      border: 2px solid red;
+    }
+    div::first-letter{
+      color: red;
+      font-size: 20px;
+    }
+    div::before{
+      content:open-quote;
+      font-size: 40px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quis ipsum aspernatur, laboriosam blanditiis officia. Nostrum sit ab ut adipisci laborum, voluptatem alias molestias esse veritatis? Quaerat facilis voluptate praesentium?
+  </div>
+</body>
+</html>
+<!-- 
+  if you want to add the external element from another html file to an existing html file then we need to write there as content=""
+ -->

@@ -1,0 +1,269 @@
+<!-- 
+BOOTSTRAP
+  You can have bootsrap in 2 ways:
+  1)downloaded:
+  compiled and minified
+  source map
+  2)CDN
+
+  diff between bs4 & bs5?
+  bs5 doesn't need jquery, but even if it is provided in an html page, it will quickly implement bs components methods and options.
+
+  bootstrap.bundle.min.js:This file contains bundle of all the required js files like popper.js which is needed for the execution of bs components like tooltip,popover etc.
+
+  bs provides 3 diff types of containers.
+  1)container:max width at each responsive breakpoint.
+  2)container fluids:has 100% width at all breakpoints.
+  3)container breakpoints:has 100% width until the specified breakpoint.
+
+  we must add jquery file into the script tag.
+  metatag.
+
+576 768
+
+GRID SYSTEM
+<div class=row>
+  <div class=col-md-5></div>
+  <div class=col-md-4></div>
+  <div class=col-md-3></div>
+</div>
+
+TYPOGRAPHY:
+Headings
+Display-1---<h1>----class=h1
+Display-2
+Display-3
+Display-4
+Display-5
+Display-6
+
+Text Allignments:
+text-start
+text-end
+text-center
+
+Text Formatting Tags
+<small>
+  <b>
+  <i>
+  <s>
+  <em>
+  <del>
+  <ins>
+  <code>
+  <div><sub>
+  <div><sup>
+  <mark>
+  <u>
+
+classes:
+Text-lowercase
+Text-uppercase
+Text-capitalize
+
+Text coloring:
+Text-primary
+Text-secondary
+Text-warning
+Text-info
+Text-danger
+Text-success
+Text-muted
+
+Tables:
+Classes:
+Table
+Table Table-primary
+Table Table-secondary
+Table Table-warning
+Table Table-success
+Table Table-danger
+Table Table-info
+Table Table-light
+Table Table-striped
+Table Table-bordered
+Table Table-borderless
+Table Table-hover
+
+Buttons:
+Classes:
+Btn
+btn btn-primary
+btn btn-secondary
+btn btn-success
+btn btn-warning
+btn btn-danger
+btn btn-info
+btn btn-dark
+btn btn-light
+btn btn-link
+
+Full width Button:
+<div class="d-grid gap-2">
+<button type="button" class="btn btn-primary">Block button</button>
+
+Anchor Elements:
+<a href=# class="btn btn-primary">
+
+Spinners:
+Classes:
+spinner-border spinner-border-sm bg-info
+spinner-grow spinner-grow-sm
+
+Button Groups:
+Classes:
+Btn-group[horizontally placed]
+Btn-group-vertical[vertically placed]
+Btn-group d-flex[full width add gap-2 for gap between]
+
+List:
+List-unstyled(without bullets or number)
+List-inline(horizontal)
+
+List Group:
+To display the elements in a group
+Basic class:list group
+list-group w-50
+list-group list-group-flush w-50
+list-group list-group-numbered w-50
+  list-group-item
+  list-group-item active/disabled
+
+Nav Tag:Syntax:
+<nav class="nav nav-tabs">
+  <a href="#" class="nav-item nav-link active">Home</a>
+  <a href="#" class="nav-item nav-link">Profile</a>
+
+  <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle"
+    data-bs-toggle="dropdown">Courses</a>
+    <div class="dropdown-menu">
+      <a href="#" class="dropdown-item">Web</a>
+      <a href="#" class="dropdown-item">MobileDevelopment</a>
+      <a href="#" class="dropdown-item">FullStack</a>
+    </div>
+  </div>
+  <a href="#" class="nav-item nav-link disabled" tabindex="-1">Report</a>
+</nav>
+
+Card:
+<div class="card" style="width: 300px;">
+  <div class="card-body text-center">
+    <h5 class="card-title">Card Title</h5>
+    <p class="card-text">Content of the card...</p>
+    <a href="#" class="btn btn-primary">Click</a>
+  </div>
+</div>
+
+Forms:2 types: Vertical & Horizontal.
+Vertical Form(default form layout)
+          Form-label and form-control
+
+Horizontal Form
+            col-form-label and col-form-control
+
+Form-check:form-check-input[radio/checkboxes]
+Form-select[dropdown list]
+
+Progress  Bar:
+Progress progress-bar/progress-bar-striped/progress-bar-animated
+
+Pagination:
+<ul class="pagination">
+  <li class="page-item page-link active">page1</li>
+  <li class="page-item page-link">page2</li>
+</ul>
+
+ class      Description
+.mt-#       Set top margin of an element
+.mb-#       Set bottom margin of an element
+.ms-#       Set left margin of an element
+.me-#       Set right margin of an element
+.mx-#       Set left & right margin of an element
+.my-#       Set top & bottom margin of an element
+.pt-#       Set top & bottom padding of an element
+
+Modal Pop Up:
+Modal-fade
+Modal-dialog
+Modal-content
+
+Form Validation Classes:
+was-validated
+text-danger invalid-feedback
+valid-feedback text-success
+
+Nav Classes:
+nav justify-content-end
+nav-link active
+nav-item nav-link-disabled
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Cell Popup</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-toggle="modal" data-target="#popupModal">Data 1</td>
+            <td>Data 2</td>
+        </tr>
+        <tr>
+            <td>Data 3</td>
+            <td data-toggle="modal" data-target="#popupModal">Data 4</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="popupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="popupModalLabel">Cell Data</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="cellData"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Add click event listener to table cells
+        $('td').click(function() {
+            // Get the text of the clicked cell
+            var cellData = $(this).text();
+            // Set the text of the modal body to the clicked cell data
+            $('#cellData').text(cellData);
+            // Show the modal
+            $('#popupModal').modal('show');
+        });
+    });
+</script>
+
+</body>
+</html>

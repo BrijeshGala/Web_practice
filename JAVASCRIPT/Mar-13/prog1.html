@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var str="jaavva";
+      var occ=[];
+      for(i=0;i<str.length;i++){
+        var count=1;
+        for(j=i+1;j<str.length;j++){
+          if(str[i]==str[j]){
+            count++;
+            occ[j]=-1;
+          }
+        }
+        if(occ[i]!=-1){
+        occ[i]=count;
+        }
+      }
+      for(i=0;i<str.length;i++){
+        if(occ[i]!=-1)
+        document.write(str[i]+"===="+occ[i]);
+      }
+      //case 2
+      var arr=['history','comics','history','science','comics'];
+      var res=[];
+      for(i=0;i<arr.length;i++){
+        if(res.length==0){
+          res.push(arr[i]);
+        }
+        else{
+          if(!res.includes(arr[i])){
+            res.push(arr[i]);
+          }
+        }
+        console.log(res);
+      }
+      else{
+        for(a=0;a<arr.length;a++){
+          for(b=a+1;b<res.length;b++){
+            if(arr[a]==res[b]){
+
+            }
+            else{
+              res.push(arr[a]);
+            }
+          }
+        }
+      }
+      </script>
+  </body>
+</html>

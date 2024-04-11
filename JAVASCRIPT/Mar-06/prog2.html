@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.addEventListener("load", funLoad,false);
+    function funLoad(){
+      var count=getCookieValue('VCount');
+      if(count==undefined){
+        count=1;
+        document.cookie="VCount="+count+";exoires=Thu, Mar 7 2024 0:0:0";
+      }
+      else{
+        count=parseInt(count)+1;
+        document.cookie="VCount="+count+";exoires=Thu, Mar 7 2024 0:0:0";
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="button" value="Create Cookie" onclick="funCreate()">
+  <input type="button" value="Delete Cookie" onclick="funDelete()">
+  <input type="button" value="Read Cookie" onclick="funRead()"></input>
+  <script>
+    function getCookieValue(cookieName){
+  var str = document.cookie;
+  var arr = str.split("; ");
+  var cookieValue = null;
+
+  for (var i = 0; i < arr.length; i++) {
+      var xarr = arr[i].split("=");
+      xarr[0] = xarr[0].trim();
+      if (xarr[0] == cookieName) {
+          cookieValue = xarr[1];
+      }
+  }
+
+  return cookieValue;
+}
+  </script>
+</body>
+</html>
+  

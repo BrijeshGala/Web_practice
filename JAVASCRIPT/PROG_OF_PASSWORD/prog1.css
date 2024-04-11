@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for the password strength message */
+#passwordMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for a green success message */
+#passwordMessage.green {
+  color: green;
+}
+
+/* Style for a red error message */
+#passwordMessage.red {
+  color: red;
+}

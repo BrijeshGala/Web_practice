@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            div{
+                width:100px;
+                height:100px;
+                border:2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" value="Hello" id=btn1>
+        <hr>
+        <ul id=list1 >
+            <li>red</li>
+            <li>green</li>
+            <li>yellow</li>
+        </ul>
+        <hr>
+        <ul id=list2>
+            <li id="li1">give alert</li>
+            <li id="li2">change background color</li>
+            <li id="li3">change font color</li>
+        </ul>
+        <hr>
+        <div id="d1" style="background-color: greenyellow;"></div>
+        <hr>
+        <a href="#" id="a1">Link</a>
+        <script>
+            //case 1 type attr. demo
+            var btn1=document.getElementById("btn1");
+            btn1.addEventListener("click",funHandler,false);
+            btn1.addEventListener("mouseover",funHandler,false);
+            btn1.addEventListener("mouseout",funHandler,false);
+            function funHandler(event){
+                if(event.type=="mouseover"){
+                    btn1.style.backgroundColor="red";
+                }
+                else if(event.type=="mouseout"){
+                    btn1.style.backgroundColor="yellow";
+                }
+                else if(event.type=="click"){
+                    console.log("its clicked!!!");
+                }
+            }
+            //case 2 event.target attr
+            var ul=document.getElementById("list1");
+            ul.addEventListener("click",funList,false);
+            function funList(event){
+               var x= event.target.innerHTML;
+               document.bgColor=x;
+            }
+            //case 3 event delegation
+            var ul2=document.getElementById("list2");
+            ul2.addEventListener("click",funClick,false);
+            function funClick(event){
+                var obj=event.target.id;
+                switch(obj){
+                    case "li1":alert("hello!!");break;
+                    case "li2":ul2.style.backgroundColor="blue";break;
+                    case "li3":ul2.style.color="white";break;
+                    default:console.log("invalid click");
+                }
+            }
+            //case 4 div
+            var d1=document.getElementById("d1");
+            d1.addEventListener("click",funDiv,false);
+            function funDiv(event){
+                var div=event.currentTarget.style.backgroundColor;
+                document.bgColor=div;
+            }
+            //case 5 <a>
+                var a1=document.getElementById("a1");
+                a1.addEventListener("click",funAnchor,false);
+                function funAnchor(event){
+                    alert(event.defaultPrevented);//f
+                    event.preventDefault();
+                    alert(event.defaultPrevented);//t
+                }
+        </script>
+    </body>
+</html>

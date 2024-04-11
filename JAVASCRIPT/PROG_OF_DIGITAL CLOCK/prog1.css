@@ -1,0 +1,48 @@
+.container{
+  background-color: #1b4965;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock{
+  background-color:#cae9ff;
+  height: 50%;
+  width:60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock span{
+  font-size:80px;
+  width:100px;
+  display:inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.clock span::after{
+  font-size:16px;
+  position: absolute;
+  bottom:-8px;
+  left:20%;
+}
+
+#hrs::after{
+  content:'HOURS';
+}
+
+#min::after{
+  content:'MINUTES';
+  left:12%;
+}
+
+#sec::after{
+  content:'SECONDS';
+  left:12%;
+}
+
+

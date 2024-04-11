@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table border="5" id="tbl1">
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>status</th>
+    </tr>
+  </table>
+  <script>
+    var arr = [{
+      "userId": 1,
+      "id": 1,
+      "title": "delectus aut autem",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "quis ut nam facilis et officia qui",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "fugiat veniam minus",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "et porro tempora",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "id": 5,
+      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "completed": false
+    }];
+
+    var tableBody = document.querySelector("#tbl1");
+    for (var i = 0; i < arr.length; i++) {
+      var task = arr[i];
+      var row = document.createElement('tr');
+
+      var idCell = document.createElement("d")
+      idCell.textContent = task.id;
+      row.appendChild(idCell);
+
+      var titleCell = document.createElement("td")
+      titleCell.textContent = task.title;
+      row.appendChild(titleCell);
+
+      var statusCell = document.createElement("td")
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+
+      checkbox.checked = task.completed;
+      statusCell.appendChild(checkbox);
+      row.appendChild(statusCell);
+
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+     Color:<select name="color" id="c1" >
+      <option>select</option>
+      <option>blue</option>
+      <option>green</option>
+      <option>yellow</option>
+      <option>red</option>
+      </select>
+      <br>
+    <input type="button" value="click it" onclick="fun()">
+    <script>
+      function fun(){
+        var str=document.getElementById("c1").value;
+        document.body.style.backgroundColor=str;
+      }
+    </script>
+  </body>
+</html>
+
+

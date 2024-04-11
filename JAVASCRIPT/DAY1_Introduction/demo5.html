@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+     Name:<input type="text" id="txtName" ><br>
+    <input type="button" value="Button" onclick="fun()">
+    <div id="d1">hello</div>
+    <script>
+      var d1=document.getElementById("d1");
+      function fun(){
+        var str=document.getElementById("txtName").value;
+        console.log(str);
+        d1.innerHTML=str;
+        document.bgColor=str;
+        d1.style.backgroundColor=str;
+      }
+    </script>
+  </body>
+</html>
+
+

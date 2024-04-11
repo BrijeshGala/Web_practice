@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="prog1.css">
+</head>
+<body>
+  Subjects:<select id="listSub">
+    <option></option>
+    <option>Angular</option>
+    <option>React</option>
+    <option>Node</option>
+    <option>Php</option>
+  </select><br>
+
+  <input type="button" value="Add" onclick="funAdd()">
+  <input type="button" value="Show" onclick="funShow()">
+  <div id="taskForm">
+    Name:<input type="text" id="txtName"><br>
+    Status:<input type="radio" name="status" value="Pending">Pending
+    <input type="radio" name="status" value="Complete">Complete
+    <br>
+    <input type="button" value="insert" onclick="funInsert()">
+  </div>
+
+  <table border="2" id="tbl"></table>
+  <script src="prog1.js"></script>
+</body>
+</html>
+ 
+
+ 

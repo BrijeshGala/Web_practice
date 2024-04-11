@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Removing duplicates from array</title>
+</head>
+<body>
+  <script>
+    var arr=["history", "history", "comic", "science", "science", "comic"];
+    var res=[];
+
+    for(i=0;i<arr.length;i++){
+      var flag=false;
+      if(res.length==0){
+        res.push(arr[i]);
+        console.log(res);
+      }
+      else{
+        for(j=0;j<res.length;j++){
+          if(arr[i]==res[j]){
+            flag=true;
+            break;
+          }
+        }
+        if(flag==false){
+          res.push(arr[i]);
+        }
+      }
+    }
+    console.log(res);
+
+    // Alternative method to remove the duplicates from the array.
+
+//   function removeDuplicates(arr) {
+//   var uniqueArray = [];
+//   for(var i = 0; i < arr.length; i++) {
+//       if(uniqueArray.indexOf(arr[i]) === -1) {
+//           uniqueArray.push(arr[i]);
+//       }
+//   }
+//   return uniqueArray;
+// }
+
+// var subjects = ["Math", "Science", "Physics", "Science", "Science"];
+// var uniqueSubjects = removeDuplicates(subjects);
+// console.log(uniqueSubjects);
+  </script>
+</body>
+</html>
+
+
