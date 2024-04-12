@@ -1,10 +1,37 @@
-var student={
-  arr:[{rollno:1,name:"aaa",marks:10},
-       {rollno:2,name:"bbb",marks:20},
-       {rollno:3,name:"ccc",marks:30}
+var students = {
+  arr: [
+      {
+          name: "sachin",
+          rollno: 10,
+          marks: 90,
+      },
+      { 
+          name: "sachin",
+          rollno: 10,
+          marks: 90
+      },
+      {
+          name: "sachin",
+          rollno: 10,
+          marks: 90
+      },
+      {
+          name: "sachin",
+          rollno: 10,
+          marks: 90
+      }
   ],
-  getAllStudents:function(){
-    return this.arr;
+  getallstudents: function () {
+      return this.arr;
+  },
+  getstudent:function (rno) {
+for(i=0;i<this.arr.length;i++){
+  if(rno==this.arr[i].rollno){
+      return this.arr[i];
   }
 }
-module.exports=student;
+      
+  }
+};
+
+module.exports = students;
